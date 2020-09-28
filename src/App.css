@@ -1,38 +1,110 @@
-.App {
+/* .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "h h"
+    "n c";
+  grid-gap: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header img {
+  width: 50px;
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.header {
+  grid-area: h;
+  background-color: brown;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.row{
+  margin-left: 0 !important;
+  margin-right: 0;
+}
+/* Header */
+
+/* Top header row */
+.header {
+  height: 150px;
+}
+.top-header-row {
+  background-color: #424242;
+  height: 27px;
+}
+.top-header-cont {
+  background-color: #424242;
+  color: white;
+  height: 27px;
+  vertical-align: center;
+  line-height: 27px;
+}
+.top-header-cont a {
+  padding-top: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.top-header-cont a:hover {
+  color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Middle header row */
+
+.mid-header-row {
+  height: 112px;
+  background: url(./Images/mid-head-bg.png) repeat-x;
+}
+.mid-header-cont {
+  line-height: 112px;
+
+}
+/* End Header */
+
+/* Central block */
+/* Main vertical menu */
+.vert-cat-menu-cont {
+  height: 39px;
+}
+.vertical-cat-menu-ul {
+  padding-top: 2px;
+}
+.active-vert-cat-menu{
+background: url("./Images/main-menu-btn.png") repeat-x;
+}
+.active-vert-cat-menu > a{
+  color: #fff !important;
+}
+.vertical-line{
+  border-bottom: solid 1px #dedede;
+}
+.vert-cat-menu-toggler-but{
+  height: 90%;
+  padding: 0 10px;
+}
+.vert-cat-menu-toggler-but > span{
+  height: 90%;
+}
+
+.central-cont-block{
+  /* color: #8e8e8e; */
+}
+
+/* Categories menu */
+#categories-menu{
+  border: 1px solid #d6d6d6 !important;
+
+}
+.cat-menu-li{
+  line-height: 29px;
+  height: 29px;
+}
+.active-cat-menu-point{
+  background: url("./Images/categories-active-btn-bg.png") repeat-x;
+}
+.active-cat-menu-point > a{
+  color: #fff !important;
+}
+.link-border{
+  border-bottom: 1px solid #e6e7e8;
+  display: flex;
 }

@@ -85,9 +85,6 @@ background: url("./Images/main-menu-btn.png") repeat-x;
   height: 90%;
 }
 
-.central-cont-block{
-  /* color: #8e8e8e; */
-}
 
 /* Categories menu */
 #categories-menu{
@@ -97,14 +94,22 @@ background: url("./Images/main-menu-btn.png") repeat-x;
 .cat-menu-li{
   line-height: 29px;
   height: 29px;
+  margin-bottom: 1px;
 }
 .active-cat-menu-point{
   background: url("./Images/categories-active-btn-bg.png") repeat-x;
-}
-.active-cat-menu-point > a{
   color: #fff !important;
+}
+.cat-menu-li a{
+  color: gray;
+}
+.cat-menu-li a:hover{
+  background-color: lightgrey;
 }
 .link-border{
   border-bottom: 1px solid #e6e7e8;
   display: flex;
+}
+.active-cat-menu-point .link-border{
+  border: none
 }

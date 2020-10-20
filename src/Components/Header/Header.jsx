@@ -1,8 +1,9 @@
 import React from "react";
-import Topheader from "./Topheader";
-import Midheader from "./Midheader";
+import Topheader from "./Topheader/Topheader";
+import Midheader from "./Midheader/Midheader";
 
-const Header = () => {
+const Header = (props) => {
+
   return (
     <header className="header-cont w-100">
       <div className="top-header-row">

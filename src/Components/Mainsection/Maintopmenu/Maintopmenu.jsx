@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Maintopmenu = () => {
-  // Central block vertical categories menu array
-  const verticalCatMenu = [
+const Maintopmenu = (props) => {
+
+let mainTopMenu = [
     {
       link: "/#",
       catName: "Computers",
@@ -69,7 +69,7 @@ const Maintopmenu = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-fill vertical-cat-menu-ul w-100">
-              {verticalCatMenu.map(({ link, catName, isActive }, indx) => {
+              {mainTopMenu.map(({ link, catName, isActive }, indx) => {
                 return (
                   <li
                     key={indx}

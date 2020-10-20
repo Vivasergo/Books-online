@@ -1,11 +1,11 @@
 import React from "react";
-import Maintopmenu from "./Maintopmenu";
-import Bannersection from "./Bannersection";
-import Categoriesmenu from "./Categoriesmenu";
+import Maintopmenu from "./Maintopmenu/Maintopmenu";
+import Bannersection from "./Bannersection/Bannersection";
+import Categoriesmenu from "./Categoriesmenu/Categoriesmenu";
 import Contentblock from "./Contentblock/Contentblock";
 
+const Mainsection = (props) => {
 
-const Mainsection = () => {
   return (
     <>
       <Maintopmenu />
@@ -14,7 +14,10 @@ const Mainsection = () => {
       <div className="container mt-3 central-cont-block">
         <div className="row">
           <Categoriesmenu />
-          <Contentblock />
+          <Contentblock
+            categories={props.categories}
+            dispatch={props.dispatch}
+          />
         </div>
       </div>
     </>

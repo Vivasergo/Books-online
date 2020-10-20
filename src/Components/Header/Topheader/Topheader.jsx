@@ -1,36 +1,33 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Topheader = () => {
-  const links = [
+const Topheader = (props) => {
+  
+ let topHeaderLinks = [
     {
       href: "/home",
-      name: "Sign In",
+      name: "Log In",
       className: "nav-link",
     },
     {
       href: "/#",
-      name: "My account",
+      name: "Sign Up",
       className: "nav-link",
     },
     {
-      href: "/#",
-      name: "Order Status",
-      className: "nav-link",
-    },
-    {
-      href: "/#",
-      name: "Help",
+      href: "/chat",
+      name: "Chat with us",
       className: "nav-link",
     },
   ];
 
   return (
     <nav className="nav justify-content-end top-header-cont">
-       {links.map(({ href, name, className }, index) => {
+       {topHeaderLinks.map(({ href, name, className }, index) => {
         return (
-          <a key={index} className={className} href={href}>
+          <NavLink key={index} className={className} to={href}>
             {name}
-          </a>
+          </NavLink>
         );
       })}
     </nav>

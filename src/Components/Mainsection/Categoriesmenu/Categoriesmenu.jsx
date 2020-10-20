@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Categoriesmenu = () => {
-  const mainCatMenuArr = [
+const Categoriesmenu = (props) => {
+
+  let categoriesMenu = [
     {
       link: "/all",
       name: "All",
@@ -43,11 +44,11 @@ const Categoriesmenu = () => {
   return (
     <div
       id="categories-menu"
-      className="col-md-4 col-lg-3 categories-menu pl-0 pr-0"
+      className="col-md-4 col-lg-3 categories-menu pl-0 pr-0 mr-md-2 mb-2 mb-md-0"
     >
       <h2 className="h5 text-secondary mt-2 ml-3 mr-3">Categories</h2>
       <ul className="nav flex-row flex-md-column w-100">
-        {mainCatMenuArr.map(({ name, link, isChapter }, indx) => {
+        {categoriesMenu.map(({ name, link, isChapter }, indx) => {
           return (
             <li key={indx} className="nav-item cat-menu-li">
               <NavLink

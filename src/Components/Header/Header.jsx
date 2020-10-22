@@ -2,7 +2,7 @@ import React from "react";
 import Topheader from "./Topheader/Topheader";
 import Midheader from "./Midheader/Midheader";
 
-const Header = (props) => {
+const Header = () => {
 
   return (
     <header className="header-cont w-100">

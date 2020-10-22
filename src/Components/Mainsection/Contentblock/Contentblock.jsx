@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import All from "./Categories/All";
-import Fiction from "./Categories/Fiction";
 import Children from "./Categories/Children";
 import Fantasy from "./Categories/Fantasy";
 import Cook from "./Categories/Cook";
@@ -9,9 +7,11 @@ import Comic from "./Categories/Comic";
 import NonFiction from "./Categories/NonFiction";
 import Style from "./Contentblock.module.css";
 import Sortmenu from "./Sortmenu/Sortmenu";
-import Chat from "./Chat/Chat";
+import AllContainer from "./Categories/AllContainer";
+import FictionContainer from "./Categories/FictionContainer";
+import ChatContainer from "./Chat/ChatContainer";
 
-const Contentblock = (props) => {
+const Contentblock = () => {
 
   return (
     <section className="col pl-1 ">
@@ -20,14 +20,10 @@ const Contentblock = (props) => {
         <Switch>
           <Route path="/all">
             {" "}
-            <All allData={props.categories.all} />{" "}
+            <AllContainer />{" "}
           </Route>
           <Route path="/fiction">
-            <Fiction
-              commentFieldText={props.categories.fiction.commentFieldText}
-              fictionData={props.categories.fiction}
-              dispatch={props.dispatch}
-            />
+            <FictionContainer />
           </Route>
           {/* <Route path="/fiction/:id" ><ItemDetails /> </Route>  */}
           <Route path="/children">
@@ -46,7 +42,7 @@ const Contentblock = (props) => {
             <NonFiction />{" "}
           </Route>
           <Route path="/chat">
-            <Chat dispatch={props.dispatch} />{" "}
+            <ChatContainer />{" "}
           </Route>
         </Switch>
       </div>

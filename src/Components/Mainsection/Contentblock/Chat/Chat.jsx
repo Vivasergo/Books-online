@@ -17,7 +17,7 @@ const Chat = (props) => {
   const handleSendContBtn = (event) => {
     event.preventDefault();
     let textToSend = inputContRef.current.value;
-    props.dispatch(sendContactFormCreator(textToSend));
+    props.sendCont(textToSend);
     setQuestion("");
     // props.sendContactForm(textToSend);
   };

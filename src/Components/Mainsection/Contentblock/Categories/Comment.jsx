@@ -7,7 +7,8 @@ const Comment = (props) => {
   //   const [textareaText, setTextareaText] = useState("");
   // console.log(props.addComment);
   const onCommentChange = (event) => {
-    props.handleCommentChange(event);
+    let value = event.target.value;
+    props.handleCommentChange(value);
   };
 
   const addCommentClick = (event) => {
@@ -15,7 +16,7 @@ const Comment = (props) => {
     let commentText = newCommentElement.current.value;
     props.addComment(commentText);
   };
-  console.log(props.commentFieldText);
+  console.log(props);
 
   return (
     <div>
@@ -33,7 +34,7 @@ const Comment = (props) => {
         </button>
       </form>
       <div>
-        {props.fictionData.categoryComments.map(({ id, text, time }) => {
+        {props.categoryComments.map(({ id, text, time }) => {
           return (
             <div key={id}>
               <br />

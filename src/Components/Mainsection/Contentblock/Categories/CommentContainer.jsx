@@ -1,21 +1,26 @@
 import React from "react";
+import { connect } from "react-redux";
 import { addCommentCreator, handleCommentChangeCreator } from "../../../../Redux/categoryReducer";
 import Comment from "./Comment";
 
-const CommentContainer = (props) => {
-
-  const handleCommentChange = (event) => {
-    props.dispatch(handleCommentChangeCreator(event))
+let mapStateToProps = (state) => {
+  return {
+    categoryComments: state.categories.fiction.categoryComments,
+    commentFieldText: state.categories.fiction.commentFieldText
   };
-
-   const addComment = (commentText) => {
-    props.dispatch(addCommentCreator(commentText));
-  };
-console.log(props.commentFieldText);
-
-  return (
-    <Comment fictionData={props.fictionData} addComment={addComment} handleCommentChange={handleCommentChange} commentFieldText={props.commentFieldText} />
-  );
 };
+
+let mapDispatchToProps = (dispatch) => {
+  return {
+    handleCommentChange: (value) => {
+      dispatch(handleCommentChangeCreator(value))
+    },
+    addComment: (commentText) =>{
+      dispatch(addCommentCreator(commentText))
+    }
+  };
+};
+
+const CommentContainer = connect(mapStateToProps, mapDispatchToProps)(Comment);
 
 export default CommentContainer;

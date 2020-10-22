@@ -69,24 +69,36 @@ const initialState = {
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_COMMENT:
-      state.fiction.categoryComments.push({
+    case ADD_COMMENT: 
+      let newComment = {
         id: "11",
         text: action.commentText,
         time: "20:50, 12.10.2020",
-      });
-      state.fiction.commentFieldText = "";
-      break;
+      };
 
+// создаем и возвращаем измененную копию state, 
+// копируя и изменяя, при надобности, вложенные объекты
+      return {
+        ...state,
+        fiction: {
+          ...state.fiction,
+          categoryComments:[
+            ...state.fiction.categoryComments,
+            newComment
+          ],
+          commentFieldText: ""
+        }
+      };
+ 
     case HANDLE_COMMENT_CHANGE:
-      let { value } = action.event.target;
-      state.fiction.commentFieldText = value;
-      break;
+      return {
+        ...state,
+      fiction:{...state.fiction, commentFieldText: action.newValue}
+      }
 
     default:
-      return state;
+      return state;        
   }
-  return state;
 };
 
 export const addCommentCreator = (text) => {
@@ -96,10 +108,10 @@ export const addCommentCreator = (text) => {
   };
 };
 
-export const handleCommentChangeCreator = (e) => {
+export const handleCommentChangeCreator = (value) => {
   return {
     type: HANDLE_COMMENT_CHANGE,
-    event: e,
+    newValue: value,
   };
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Topheader = (props) => {
+const Topheader = () => {
   
  let topHeaderLinks = [
     {

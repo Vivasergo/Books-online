@@ -4,7 +4,7 @@ import Bannersection from "./Bannersection/Bannersection";
 import Categoriesmenu from "./Categoriesmenu/Categoriesmenu";
 import Contentblock from "./Contentblock/Contentblock";
 
-const Mainsection = (props) => {
+const Mainsection = () => {
 
   return (
     <>
@@ -14,10 +14,7 @@ const Mainsection = (props) => {
       <div className="container mt-3 central-cont-block">
         <div className="row">
           <Categoriesmenu />
-          <Contentblock
-            categories={props.categories}
-            dispatch={props.dispatch}
-          />
+          <Contentblock />
         </div>
       </div>
     </>

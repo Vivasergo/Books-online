@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addCommentCreator, handleCommentChangeCreator } from "../../../../Redux/categoryReducer";
+import { addCommentCreator, handleCommentChangeCreator } from "../../../../../Redux/categoryReducer";
 import Comment from "./Comment";
 
 let mapStateToProps = (state) => {

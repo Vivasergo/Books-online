@@ -1,6 +1,7 @@
 import React from "react";
-import CommentContainer from "./CommentContainer";
-import Item from "./Items/Item";
+import CommentContainer from "../Comment/CommentContainer";
+
+import Item from "../Items/Item";
 
 
 const Fiction = (props) => {

@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Children from "./Categories/Children";
-import Fantasy from "./Categories/Fantasy";
-import Cook from "./Categories/Cook";
-import Comic from "./Categories/Comic";
-import NonFiction from "./Categories/NonFiction";
+import Children from "./Categories/Children/Children";
+import Fantasy from "./Categories/Fantasy/Fantasy";
+import Cook from "./Categories/Cook/Cook";
+import Comic from "./Categories/Comic/Comic";
+import NonFiction from "./Categories/Nonfiction/NonFiction";
 import Style from "./Contentblock.module.css";
 import Sortmenu from "./Sortmenu/Sortmenu";
-import AllContainer from "./Categories/AllContainer";
-import FictionContainer from "./Categories/FictionContainer";
+import AllContainer from "./Categories/All/AllContainer";
+import FictionContainer from "./Categories/Fiction/FictionContainer";
 import ChatContainer from "./Chat/ChatContainer";
 
 const Contentblock = () => {

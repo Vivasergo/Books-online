@@ -15,8 +15,8 @@ const Topheader = () => {
       className: "nav-link",
     },
     {
-      href: "/chat",
-      name: "Chat with us",
+      href: "/social-network",
+      name: "Our social network",
       className: "nav-link",
     },
   ];

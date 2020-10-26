@@ -9,7 +9,8 @@ import Style from "./Contentblock.module.css";
 import Sortmenu from "./Sortmenu/Sortmenu";
 import AllContainer from "./Categories/All/AllContainer";
 import FictionContainer from "./Categories/Fiction/FictionContainer";
-import ChatContainer from "./Chat/ChatContainer";
+import UsersContainer from "./SocialNetwork/Users/UsersContainer";
+
 
 const Contentblock = () => {
 
@@ -41,8 +42,8 @@ const Contentblock = () => {
           <Route path="/nonfiction">
             <NonFiction />{" "}
           </Route>
-          <Route path="/chat">
-            <ChatContainer />{" "}
+          <Route path="/social-network">
+            <UsersContainer />{" "}
           </Route>
         </Switch>
       </div>

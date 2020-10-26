@@ -16,7 +16,7 @@ const Comment = (props) => {
     let commentText = newCommentElement.current.value;
     props.addComment(commentText);
   };
-  console.log(props);
+;
 
   return (
     <div>

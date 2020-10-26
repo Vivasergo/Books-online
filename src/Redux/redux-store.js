@@ -1,10 +1,11 @@
 import { combineReducers, createStore } from "redux";
 import categoryReducer from "./categoryReducer";
-import chatReducer from "./chatReducer";
+import usersReducer from "./usersReducer";
+
 
 let reducers = combineReducers({
   categories: categoryReducer,
-  chat: chatReducer,
+  usersPage: usersReducer,
 });
 
 let store = createStore(reducers);

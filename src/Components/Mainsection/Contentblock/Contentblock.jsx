@@ -17,7 +17,7 @@ const Contentblock = () => {
   return (
     <section className="col pl-1 ">
       <Sortmenu />
-      <div className={Style.cblock + " container"}>
+      <div className={Style.cblock + " container pb-2"}>
         <Switch>
           <Route path="/all">
             {" "}

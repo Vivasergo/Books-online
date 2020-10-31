@@ -52,7 +52,7 @@ header img {
 
 .mid-header-row {
   height: 112px;
-  background: url(./Images/mid-head-bg.png) repeat-x;
+  background: url("../Images/mid-head-bg.png") repeat-x;
 }
 .mid-header-cont {
   line-height: 112px;
@@ -69,7 +69,7 @@ header img {
   padding-top: 2px;
 }
 .active-vert-cat-menu{
-background: url("./Images/main-menu-btn.png") repeat-x;
+background: url("../Images/main-menu-btn.png") repeat-x;
 }
 .active-vert-cat-menu > a{
   color: #fff !important;
@@ -97,7 +97,7 @@ background: url("./Images/main-menu-btn.png") repeat-x;
   margin-bottom: 1px;
 }
 .active-cat-menu-point{
-  background: url("./Images/categories-active-btn-bg.png") repeat-x;
+  background: url("../Images/categories-active-btn-bg.png") repeat-x;
   color: #fff !important;
 }
 .cat-menu-li a{

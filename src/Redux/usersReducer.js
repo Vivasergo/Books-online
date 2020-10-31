@@ -1,60 +1,20 @@
+
 const FOLLOW_TRIGGER = "FOLLOW-TRIGGER";
+const SET_USERS = "SET-USERS";
+const SET_TOTAL_PAGES = "SET_TOTAL_PAGES";
+const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+const TOGGLE_IS_LOADING = "TOGGLE_IS_LOADING";
+
+// let testState;
+
+// let ajaxResponse = (response) => testState = response;
 
 const initialState = {
-  items: [
-    {
-      id: "1",
-      firstName: "Dima",
-      lastName: "Ivanov",
-      avatarURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnlwn0zWYxGemFG6uiE_I2Huf0014n2VNvWg&usqp=CAU",
-      followed: false,
-      status: "Hi, everyone",
-      location: {
-        country: "Ukraine",
-        city: "Kiev",
-      },
-    },
-    {
-      id: "2",
-      firstName: "Sergey",
-      lastName: "Vas",
-      avatarURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnlwn0zWYxGemFG6uiE_I2Huf0014n2VNvWg&usqp=CAU",
-        followed: true,
-      status: "Hi, friends",
-      location: {
-        country: "Poland",
-        city: "Torun",
-      },
-    },
-    {
-      id: "3",
-      firstName: "Andrzej",
-      lastName: "Stepanov",
-      avatarURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnlwn0zWYxGemFG6uiE_I2Huf0014n2VNvWg&usqp=CAU",
-        followed: false,
-      status: "Good afternoon",
-      location: {
-        country: "Ukraine",
-        city: "Kryvyi Rih",
-      },
-    },
-    {
-      id: "4",
-      firstName: "Sasha",
-      lastName: "Black",
-      avatarURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnlwn0zWYxGemFG6uiE_I2Huf0014n2VNvWg&usqp=CAU",
-        followed: true,
-      status: "Hej, bro",
-      location: {
-        country: "Spain",
-        city: "Madrid",
-      },
-    },
-  ],
+  items: [],
+  currentPage: 1,
+  countItems: 50,
+  totalPages:"",
+  isLoading: null
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -66,13 +26,36 @@ const usersReducer = (state = initialState, action) => {
           if (user.id === action.userId) {
             return {
               ...user,
-              followed: !user.followed
-            }
-          }
-          else{
-            return user
+              followed: !user.followed,
+            };
+          } else {
+            return user;
           }
         }),
+      };
+
+    case SET_USERS:
+      return {
+        ...state,
+        items: [...action.items],
+      };
+
+      case SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.currentPage
+      };
+
+      case SET_TOTAL_PAGES:
+      return {
+        ...state,
+        totalPages: action.totalPages
+      };
+      
+      case TOGGLE_IS_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading
       };
 
     default:
@@ -80,11 +63,41 @@ const usersReducer = (state = initialState, action) => {
   }
 };
 
-export const followTriggerAC = (id) => {
+
+
+export const followTrigger = (id) => {
   return {
     type: FOLLOW_TRIGGER,
     userId: id,
   };
+};
+
+export const setUsers = (users) => {
+  return {
+    type: SET_USERS,
+    items: users,
+  };
+};
+
+export const setCurrentPage =(currentPage)=>{
+  return {
+    type: SET_CURRENT_PAGE,
+    currentPage: currentPage,
+  }
+};
+
+export const setTotalPages =(totalPages)=>{
+  return {
+    type: SET_TOTAL_PAGES,
+    totalPages: totalPages,
+  }
+};
+
+export const toggleIsLoading =(isLoading)=>{
+  return {
+    type: TOGGLE_IS_LOADING,
+    isLoading: isLoading,
+  }
 };
 
 export default usersReducer;

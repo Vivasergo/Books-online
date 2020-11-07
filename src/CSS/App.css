@@ -113,3 +113,10 @@ background: url("../Images/main-menu-btn.png") repeat-x;
 .active-cat-menu-point .link-border{
   border: none
 }
+
+/* Contentblock common*/
+
+.profileBlock{
+  width: inherit;
+  border: 1px solid #d6d6d6;
+}

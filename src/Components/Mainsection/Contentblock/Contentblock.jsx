@@ -10,14 +10,13 @@ import Sortmenu from "./Sortmenu/Sortmenu";
 import AllContainer from "./Categories/All/AllContainer";
 import FictionContainer from "./Categories/Fiction/FictionContainer";
 import UsersContainer from "./SocialNetwork/Users/UsersContainer";
-
+import ProfileContainer from "./SocialNetwork/Profile/ProfileContainer";
 
 const Contentblock = () => {
-
   return (
     <section className="col pl-1 ">
       <Sortmenu />
-      <div className={Style.cblock + " container pb-2"}>
+      <div className={Style.cblock + " container pb-2 pt-2"}>
         <Switch>
           <Route path="/all">
             {" "}
@@ -44,6 +43,9 @@ const Contentblock = () => {
           </Route>
           <Route path="/social-network">
             <UsersContainer />{" "}
+          </Route>
+          <Route path="/profile/:userId?">
+            <ProfileContainer />{" "}
           </Route>
         </Switch>
       </div>

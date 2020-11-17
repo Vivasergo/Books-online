@@ -1,6 +1,6 @@
 import React from "react";
 import Midheader from "./Midheader/Midheader";
-import TopheaderContainer from "./Topheader/TopheaderContainer";
+import Topheader from "./Topheader/Topheader";
 
 const Header = () => {
 
@@ -8,12 +8,13 @@ const Header = () => {
     <header className="header-cont w-100">
       <div className="top-header-row">
         <div className="container">
-          <TopheaderContainer />
+          <Topheader />
         </div>
       </div>
       <div className="mid-header-row">
         <div className="container">
           <Midheader />
+          
         </div>
       </div>
     </header>

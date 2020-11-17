@@ -1,53 +1,38 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 
-const Maintopmenu = (props) => {
+const Maintopmenu = () => {
 
 let mainTopMenu = [
     {
-      link: "/#",
-      catName: "Computers",
-      isActive: false,
+      link: "/all",
+      catName: "All categories"
     },
     {
-      link: "/#",
-      catName: "Cooking",
-      isActive: false,
+      link: "/best-2019",
+      catName: "Best sellers 2019"
     },
     {
-      link: "/#",
-      catName: "Education",
+      link: "/best-2020",
+      catName: "Best sellers 2020",
       isActive: true,
     },
     {
-      link: "/#",
-      catName: "Fiction",
-      isActive: false,
+      link: "/newest",
+      catName: "Newest"
     },
     {
-      link: "/#",
-      catName: "Health",
-      isActive: false,
+      link: "/top",
+      catName: "Top 50"
     },
     {
-      link: "/#",
-      catName: "Mathematics",
-      isActive: false,
+      link: "/sale",
+      catName: "Sale"
     },
     {
-      link: "/#",
-      catName: "Medical",
-      isActive: false,
-    },
-    {
-      link: "/#",
-      catName: "Reference",
-      isActive: false,
-    },
-    {
-      link: "/#",
-      catName: "Science",
-      isActive: false,
+      link: "/exclusive",
+      catName: "Exclusive"
     },
   ];
 
@@ -69,17 +54,15 @@ let mainTopMenu = [
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-fill vertical-cat-menu-ul w-100">
-              {mainTopMenu.map(({ link, catName, isActive }, indx) => {
+              {mainTopMenu.map(({ link, catName}, indx) => {
                 return (
                   <li
                     key={indx}
-                    className={
-                      isActive ? "nav-item active-vert-cat-menu" : "nav-item"
-                    }
+                    className="nav-item"
                   >
-                    <a className="nav-link" href={link}>
+                    <NavLink activeClassName="active-vert-cat-menu" className="nav-link font-weight-bold" to={link}>
                       {catName}
-                    </a>
+                    </NavLink>
                   </li>
                 );
               })}

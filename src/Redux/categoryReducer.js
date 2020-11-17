@@ -5,18 +5,48 @@ const initialState = {
   all: {
     items: [
       {
-        id: "1",
-        link: "/123",
-        name: "The war of art",
-        imgLink: "book1.jpg",
+        id: "31",
+        link: "/fiction/3",
+        name: "The hare",
+        imgLink: "/public-img/book1.jpg",
         is30off: true,
+        comments: [
+          {
+            name: "Alex",
+            comment: "Good book!",
+            time: "19:50, 12.10.2020",
+          },
+        ],
+      },
+      {
+        id: "42",
+        link: "/1298083324",
+        name: "Amber eyes",
+        imgLink: "/public-img/book2.jpg",
+        is30off: false,
         comments: [],
       },
       {
-        id: "2",
-        link: "/123324",
-        name: "The war of artists",
-        imgLink: "/wrwsdfsrerw.jpg",
+        id: "53",
+        link: "/1298083324",
+        name: "Can love happen twice",
+        imgLink: "/public-img/book3.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "64",
+        link: "/1298083324",
+        name: "Meluha",
+        imgLink: "/public-img/book4.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "75",
+        link: "/1298083324",
+        name: "Meluha",
+        imgLink: "/public-img/book5.jpg",
         is30off: false,
         comments: [],
       },
@@ -30,6 +60,7 @@ const initialState = {
     ],
   },
   fiction: {
+    title: "Fiction & literature",
     items: [
       {
         id: "3",
@@ -47,6 +78,92 @@ const initialState = {
       },
       {
         id: "4",
+        link: "/1298083324",
+        name: "Amber eyes",
+        imgLink: "/public-img/book2.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "5",
+        link: "/1298083324",
+        name: "Can love happen twice",
+        imgLink: "/public-img/book3.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "6",
+        link: "/1298083324",
+        name: "Meluha",
+        imgLink: "/public-img/book4.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "7",
+        link: "/1298083324",
+        name: "Life is what you make it",
+        imgLink: "/public-img/book5.jpg",
+        is30off: false,
+        comments: [],
+      },
+    ],
+
+    commentFieldText: "",
+
+    categoryComments: [
+      {
+        id: "10",
+        text: "Good site!",
+        time: "19:50, 12.10.2020",
+      },
+    ],
+  },
+  children: {
+    title: "Children",
+    items: [
+      
+      {
+        id: "555",
+        link: "/1298083324",
+        name: "Can love happen twice",
+        imgLink: "/public-img/book3.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "666",
+        link: "/1298083324",
+        name: "Meluha",
+        imgLink: "/public-img/book4.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "777",
+        link: "/1298083324",
+        name: "Life is what you make it",
+        imgLink: "/public-img/book5.jpg",
+        is30off: false,
+        comments: [],
+      },
+      {
+        id: "333",
+        link: "/fiction/3",
+        name: "The hare",
+        imgLink: "/public-img/book1.jpg",
+        is30off: true,
+        comments: [
+          {
+            name: "Alex",
+            comment: "Good book!",
+            time: "19:50, 12.10.2020",
+          },
+        ],
+      },
+      {
+        id: "444",
         link: "/1298083324",
         name: "Amber eyes",
         imgLink: "/public-img/book2.jpg",

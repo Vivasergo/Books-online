@@ -4,7 +4,7 @@ import Logo from "../../../Images/logo.png";
 const Midheader = () => {
   return (
     <div className="row mid-header-cont">
-      <div className="logo">
+      <div className="logo col">
         <a href="/#">
           <img src={Logo} alt="" />
         </a>

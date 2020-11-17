@@ -1,26 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Topheader = (props) => {
+const Topheader = () => {
   return (
     <nav className="nav justify-content-end top-header-cont">
-      {props.isLogged ? (
-        <>
-          <span>{props.fullName}</span>
-        </>
-      ) : (
-        <>
-          <NavLink className="nav-link" to="/#">
-            Log In
-          </NavLink>
-          <NavLink className="nav-link" to="/#">
-            Sign Up
-          </NavLink>
-        </>
-      )}
+      <NavLink className="nav-link" to="/login">
+        Log In
+      </NavLink>
+      <NavLink className="nav-link" to="/sign-up">
+        Sign Up
+      </NavLink>
 
-      <NavLink className="nav-link" to="/social-network">
-        Our social network
+      <NavLink className="nav-link" to="/chat">
+        Quick chat
+      </NavLink>
+      <NavLink className="nav-link" to="/contacts">
+        Contacts
       </NavLink>
     </nav>
   );

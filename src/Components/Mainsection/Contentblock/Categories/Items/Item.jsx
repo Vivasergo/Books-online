@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 const Item = (props) => {
  
   return (
-  <div className="col justify-content-center">
-     <h5>{props.itemData.name}</h5>
+  <div className="col-xs-12 col-sm-6 col-lg-3 cat-item-block mb-4">
+     <h6 className="cat-item-title">{props.itemData.name}</h6>
     <div><img src={props.itemData.imgLink} alt="sad" /></div>
-    <NavLink to={props.itemData.link} >Details</NavLink>
+    <NavLink className="text-secondary" to={props.itemData.link} >Details</NavLink>
   </div>
   );
 };

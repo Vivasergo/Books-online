@@ -70,6 +70,7 @@ header img {
 }
 .active-vert-cat-menu{
 background: url("../Images/main-menu-btn.png") repeat-x;
+color: white !important;
 }
 .active-vert-cat-menu > a{
   color: #fff !important;
@@ -119,4 +120,11 @@ background: url("../Images/main-menu-btn.png") repeat-x;
 .profileBlock{
   width: inherit;
   border: 1px solid #d6d6d6;
+}
+
+.cat-item-block{
+  text-align: center !important;
+}
+.cat-item-title{
+  height: 40px;
 }

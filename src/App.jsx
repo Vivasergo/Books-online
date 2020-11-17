@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Components/Footer/Footer";
 
 import Header from "./Components/Header/Header";
 import Mainsection from "./Components/Mainsection/Mainsection";
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <Mainsection />
+      <Footer />
   </>
   );
 }
